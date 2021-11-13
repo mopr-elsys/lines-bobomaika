@@ -48,7 +48,9 @@ struct Line {
     }
 
     bool perpendicular(const Line& other) const {
-        return eq(this -> A / other.B, this -> B / other.B);
+        if(other.B != 0){
+            return eq(this -> A / other.B, this -> B / other.B);
+        }
     }
 
     Line perpendicular(const Point& p) {

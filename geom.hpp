@@ -51,6 +51,8 @@ struct Line {
         if(other.B != 0){
             return eq(this -> A / other.B, this -> B / other.B);
         }
+
+        return false;
     }
 
     Line perpendicular(const Point& p) {
